@@ -13,7 +13,7 @@ public class Chapter1 {
 		age = 31;
 		System.out.println("いや。本当の年齢は" + age);
 
-		double pi = 3.14;
+		final double pi = 3.14;
 		int pie = 5;
 		System.out.println("半径" + pie + "cmのパイの面積は");
 		System.out.println(pie * pie * pi);
@@ -21,6 +21,18 @@ public class Chapter1 {
 		pie = 10;
 		System.out.println("半径" + pie + "cmのパイの面積は");
 		System.out.println(pie * pie * pi);
-	}
 
+//		練習問題1-2
+		int a = 3;
+		int b = 5;
+		int c = a * b;
+		System.out.println("縦幅3横幅5の長方形の面積は、" +c);
+
+//		練習問題1-3
+		boolean result = true;
+		char favoriteCharacter = '駆';
+		double aa = 3.14;
+		long number = 314159265853979L;
+		String msg = "ミナトの攻撃！敵に１５ポイントのダメージを与えた。";
+	}
 }

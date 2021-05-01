@@ -6,6 +6,10 @@ public class Chapter1 {
 		System.out.println("Ver.0.1 by 湊");
 		System.out.println("<ただいま鋭意学集中・製作中>");
 		System.out.println("プログラムを終了します");
+
+		int age;
+		age = 30;
+		System.out.println(age);
 	}
 
 }

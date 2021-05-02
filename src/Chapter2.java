@@ -1,0 +1,32 @@
+
+public class Chapter2 {
+
+	public static void main(String[] args) {
+
+//		変数宣言と計算の文
+		int a;
+		int b;
+		a = 20;
+		b = a + 5;
+		System.out.println(a);
+		System.out.println(b);
+
+//		エスケープシーケンスの例
+		System.out.println("\"1200");
+
+//		インクリメント演算子
+		int c;
+		c = 100;
+		c++;
+		System.out.println(c);
+
+//		値より大きな型の変数に代入
+		float f = 3;
+		double d = f;
+		System.out.println(f);
+		System.out.println(d);
+
+
+	}
+
+}

@@ -39,6 +39,38 @@ public class Chapter3 {
 			default:
 				System.out.println("凶");
 		}
+
+//		あえてbreak文を書かないパターン
+		switch (forturn) {
+			case 1:
+				System.out.println("いいね");
+				break;
+			case 2:
+			case 3:
+				System.out.println("普通です");
+				break;
+			case 4:
+				System.out.println("うーん");
+		}
+
+//		基本的なfor文
+		for (int i = 0; i < 10; i++) {
+			System.out.println("こんにちは");
+		}
+
+//		ループ変数はブロック内で使用可能
+		for (int j = 0; j < 10; j++) {
+			System.out.println("現在" + (j + 1) + "周目");
+		}
+
+//		for文のループを２重にして九九の表を出力
+		for (int k = 1; k < 10; k++) {
+			for(int m = 1; m < 10; m++) {
+				System.out.print(k * m);
+				System.out.print(" ");
+			}
+			System.out.println("");
+		}
 	}
 
 }

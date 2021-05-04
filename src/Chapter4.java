@@ -29,6 +29,27 @@ public class Chapter4 {
 //		配列の要素に値を代入
 		scores[1] = 30;
 		System.out.println(scores[1]);
+
+//		配列を用いた点数管理プログラム
+		int[] score = {20, 30, 40, 50, 80};
+		int SUM = score[0] + score[1] + score[2] + score[3] + score[4];
+		int AVG = SUM / score.length;
+		System.out.println("合計点" + SUM);
+		System.out.println("平均点" + AVG);
+
+//		for文を使って配列を扱う
+//		ループによる全要素の利用
+		for (int i = 0; i < score.length; i++) {
+			System.out.println(score[i]);
+		}
+
+//		点数管理プログラム（for文の利用）
+		int Sum = 0;
+		for (int i = 0; i < score.length; i++) {
+			Sum += score[i];
+		}
+		System.out.println(Sum);
+
 	}
 
 }

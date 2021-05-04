@@ -42,6 +42,10 @@ public class Chapter4 {
 		for (int i = 0; i < score.length; i++) {
 			System.out.println(score[i]);
 		}
+//		拡張for文
+		for (int value : score) {
+			System.out.println(value);
+		}
 
 //		点数管理プログラム（for文の利用）
 		int Sum = 0;
@@ -50,6 +54,45 @@ public class Chapter4 {
 		}
 		System.out.println(Sum);
 
+//		50点以上の科目の数を調べる
+		int count = 0;
+		for (int i = 0; i < score.length; i++) {
+			if (score[i] >= 50) {
+				count++;
+			}
+		}
+		System.out.println("50点以上の科目のが数は" + count);
+
+//		DNAの記号をランダムに表示する
+		int[] seq = new int[10];
+
+		for (int i = 0; i < seq.length; i++) {
+			seq[i] = new java.util.Random().nextInt(4);
+		}
+
+		for (int i = 0; i < seq.length; i++) {
+			switch (seq[i]) {
+				case 0:
+					System.out.print("A");
+					break;
+				case 1:
+					System.out.print("T");
+					break;
+				case 2:
+					System.out.print("G");
+					break;
+				case 3:
+					System.out.print("C");
+					break;
+			}
+		}
+
+//		配列の舞台裏
+		int[] arrayA = {1, 2, 3};
+		int[] arrayB;
+		arrayB = arrayA;
+		arrayB[0] = 100;
+		System.out.println(arrayA[0]);
 	}
 
 }

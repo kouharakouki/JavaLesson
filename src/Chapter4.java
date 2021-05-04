@@ -93,6 +93,28 @@ public class Chapter4 {
 		arrayB = arrayA;
 		arrayB[0] = 100;
 		System.out.println(arrayA[0]);
+
+//		ガーベジコレクション（配列の後片付け nullで意図的に参照されないようにもできる）
+		boolean judge = true;
+		if (judge == true) {
+			int[] array = {1, 2, 3};
+			array = null;
+		}
+
+//		２次元配列の利用
+		int[][] Scores = new int[2][3];
+		Scores[0][0] = 40;
+		Scores[0][1] = 50;
+		Scores[0][2] = 60;
+		Scores[1][0] = 80;
+		Scores[1][1] = 60;
+		Scores[1][2] = 70;
+		System.out.println(Scores[1][1]);
+
+//		親配列、子配列の要素数表示
+		int[][] Score = {{40, 50, 60}, {80, 60, 70}};
+		System.out.println(Score.length);
+		System.out.println(Score[0].length);
 	}
 
 }

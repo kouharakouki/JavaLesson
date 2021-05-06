@@ -9,6 +9,11 @@ public class Chapter5 {
 		HELLO("朝香");
 		add(100, 20);
 		add(200, 50);
+		int ans = ADD(100, 10);
+		System.out.println("100 + 10 =" + ans);
+		System.out.println(Add(10, 20));
+		System.out.println(Add("Hello", "World"));
+		System.out.println(Add(3.5, 2.7));
 		System.out.println("メソッドの呼び出しが終わりました");
 	}
 
@@ -37,5 +42,22 @@ public class Chapter5 {
 		int ans = x + y;
 		System.out.println(x + "+" + y + "=" + ans);
 	}
+
+	public static int ADD(int x, int y) {
+		int ans = x + y;
+		return ans;
+	}
+
+//	オーバーロード（引数の型が異なる）
+	public static int Add(int x, int y) {
+		return x + y;
+	}
+	public static double Add(double x, double y) {
+		return x + y;
+	}
+	public static String Add(String x, String y) {
+		return x + y;
+	}
+
 
 }

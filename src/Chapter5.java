@@ -14,6 +14,22 @@ public class Chapter5 {
 		System.out.println(Add(10, 20));
 		System.out.println(Add("Hello", "World"));
 		System.out.println(Add(3.5, 2.7));
+		System.out.println(aDD(10, 20));
+		System.out.println(aDD(10, 20, 30));
+
+		int[] array = {1, 2, 3};
+		printArray(array);
+
+		incArray(array);
+		for (int i : array) {
+			System.out.println(i);
+		}
+
+		int[] Array = makeArray(3);
+		for (int i : Array) {
+			System.out.println(i);
+		}
+
 		System.out.println("メソッドの呼び出しが終わりました");
 	}
 
@@ -57,6 +73,35 @@ public class Chapter5 {
 	}
 	public static String Add(String x, String y) {
 		return x + y;
+	}
+
+//	オーバーロード（引数の数が異なる場合）
+	public static int aDD(int x, int y) {
+		return x + y;
+	}
+	public static int aDD(int x, int y, int z) {
+		return x + y + z;
+	}
+
+//	引数に配列を受け取るメソッドを利用
+	public static void printArray(int[] array) {
+		for (int element : array) {
+			System.out.println(element);
+		}
+	}
+
+	public static void incArray(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			array[i]++;
+		}
+	}
+
+	public static int[] makeArray(int size) {
+		int[] newArray = new int[size];
+		for (int i = 0; i < newArray.length; i++) {
+			newArray[i] = i;
+		}
+		return newArray;
 	}
 
 

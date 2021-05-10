@@ -8,7 +8,7 @@ public class Chapter9 {
 		Hero h1 = new Hero("ミナト");
 		h1.sword = s;
 
-		Hero h2 = new Hero("アサカ");
+		Hero h2 = new Hero();
 
 		Wizard w = new Wizard();
 		w.name = "スガワラ";

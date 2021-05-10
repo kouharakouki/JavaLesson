@@ -10,6 +10,10 @@ public class Hero {
 		this.name = name;
 	}
 
+	public Hero() {
+		this("ダミー");
+	}
+
 	public void attack() {
 		System.out.println(this.name + "は" + this.sword.name + "で攻撃をした");
 		System.out.println("敵に" + this.sword.damage + "ポイントのダメージを与えた！");

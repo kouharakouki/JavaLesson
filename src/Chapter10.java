@@ -7,6 +7,9 @@ public class Chapter10 {
 
 		Hero h = new Hero("ミナト");
 		h.run();
+
+		Weapon w = new Weapon();
+		System.out.println(w.name);
 	}
 
 }

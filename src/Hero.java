@@ -12,6 +12,7 @@ public class Hero {
 
 	public Hero() {
 		this("ダミー");
+		System.out.println("Heroのコンストラクタが作動");
 	}
 
 	public void attack() {
@@ -30,7 +31,8 @@ public class Hero {
 		System.out.println("HPが" + sec + "ポイント回復した");
 	}
 
-	public void slip() {
+//	継承時にオーバーライドさせないようにfinalをつける
+	public final void slip() {
 		this.hp -= 5;
 		System.out.println(this.name + "は転んだ");
 		System.out.println("5のダメージ");

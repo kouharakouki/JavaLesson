@@ -1,8 +1,20 @@
 
-public class Wizard {
+public class Wizard extends Character {
 
-	String name;
-	int hp;
+	int mp;
+
+	public void attack(Matango m) {
+		System.out.println(this.name + "の攻撃！");
+		System.out.println("敵に３ポイントのダメージ");
+		m.hp -= 3;
+	}
+
+	public void fireball(Matango m) {
+		System.out.println(this.name + "は火の玉を放った");
+		System.out.println("敵に２０ポイントのダメージ");
+		m.hp -= 20;
+		this.mp -= 5;
+	}
 
 	public void heal(Hero h) {
 		h.hp += 10;

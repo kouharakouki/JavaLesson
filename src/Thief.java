@@ -1,8 +1,6 @@
 
-public class Thief {
+public class Thief extends Character {
 
-	String name;
-	int hp;
 	int mp;
 
 	public Thief(String name, int hp, int mp) {
@@ -17,6 +15,14 @@ public class Thief {
 
 	public Thief(String name) {
 		this(name, 40);
+	}
+
+	public Thief() {
+
+	}
+
+	public void attack(Matango m) {
+
 	}
 
 }

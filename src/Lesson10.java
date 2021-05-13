@@ -5,6 +5,7 @@ public class Lesson10 {
 		Hero h = new Hero("こうき");
 		PoisonMatango pm = new PoisonMatango('A');
 		Sword s = new Sword();
+		Matango m = new Matango();
 
 		s.name = "炎の剣";
 		s.damage = 10;
@@ -24,8 +25,8 @@ public class Lesson10 {
 		pm.attack(h);
 		System.out.println("勇者のHPは残り" + h.hp);
 
-		h.attack();
-		h.attack();
+		h.attack(m);
+		h.attack(m);
 
 		pm.run();
 	}

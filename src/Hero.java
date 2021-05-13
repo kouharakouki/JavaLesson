@@ -1,8 +1,6 @@
 
-public class Hero {
+public class Hero extends Character {
 
-	String name;
-	int hp;
 	Sword sword;
 
 	public Hero(String name) {
@@ -15,7 +13,7 @@ public class Hero {
 		System.out.println("Heroのコンストラクタが作動");
 	}
 
-	public void attack() {
+	public void attack(Matango m) {
 		System.out.println(this.name + "は" + this.sword.name + "で攻撃をした");
 		System.out.println("敵に" + this.sword.damage + "ポイントのダメージを与えた！");
 	}

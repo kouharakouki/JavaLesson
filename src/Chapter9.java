@@ -14,8 +14,10 @@ public class Chapter9 {
 		w.name = "スガワラ";
 		w.hp = 100;
 
+		Matango m = new Matango();
+
 		System.out.println("現在の武器は" + h1.sword.name);
-		h1.attack();
+		h1.attack(m);
 
 		w.heal(h1);
 		w.heal(h2);

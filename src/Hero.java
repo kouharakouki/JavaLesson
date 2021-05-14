@@ -16,6 +16,11 @@ public class Hero extends Character {
 	public void attack(Matango m) {
 		System.out.println(this.name + "は" + this.sword.name + "で攻撃をした");
 		System.out.println("敵に" + this.sword.damage + "ポイントのダメージを与えた！");
+		System.out.println("お化けキノコ" + m.suffix + "から２ポイントの反撃を受けた");
+		this.hp -= 2;
+		if (this.hp <= 0) {
+			this.die();
+		}
 	}
 
 	public void sleep() {
@@ -40,6 +45,16 @@ public class Hero extends Character {
 		System.out.println(this.name + "は逃げ出した！");
 		System.out.println("GAMEOVER");
 		System.out.println("最終HPは" + this.hp + "でした");
+	}
+
+	public void bye() {
+		System.out.println("勇者は別れを告げた");
+	}
+
+//	カプセル化（他のクラスから呼び出されないように）
+	private void die() {
+		System.out.println(this.name + "は死んでしまった");
+		System.out.println("GAME OVERです");
 	}
 
 }

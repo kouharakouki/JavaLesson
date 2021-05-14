@@ -3,6 +3,18 @@ public class Hero extends Character {
 
 	Sword sword;
 
+	public String getName() {
+		return this.name;
+	}
+
+	public int getHp() {
+		return this.hp;
+	}
+
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+
 	public Hero(String name) {
 		this.hp = 100;
 		this.name = name;

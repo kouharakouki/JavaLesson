@@ -3,6 +3,7 @@ public class IronMan {
 
 	private String name;
 	int hp;
+	static int mp;
 
 //	静的フィールド
 	static int money;
@@ -18,6 +19,10 @@ public class IronMan {
 			}
 		}
 		return false;
+	}
+
+	public static void setRandomMp() {
+		IronMan.mp = (int)(Math.random() * 1000);
 	}
 
 

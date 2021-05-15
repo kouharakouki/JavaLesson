@@ -20,8 +20,6 @@ public class Chapter14 {
 		im2.setName("アイアンマン");
 		im2.hp = 10;
 
-		System.out.println(IronMan.money);
-
 		if (im1.equals(im2) == true) {
 			System.out.println("同じ内容です");
 		} else {
@@ -33,6 +31,20 @@ public class Chapter14 {
 		} else {
 			System.out.println("違う内容です");
 		}
+
+//		静的フィールド
+		IronMan.money = 100;
+
+		System.out.println(IronMan.money);
+		System.out.println(im1.money);
+		im1.money = 300;
+		System.out.println(im2.money);
+
+		IronMan.setRandomMp();
+		System.out.println(IronMan.mp);
+		IronMan im3 = new IronMan();
+		System.out.println(im3.mp);
+
 	}
 
 	public void printAnything(Object o) {

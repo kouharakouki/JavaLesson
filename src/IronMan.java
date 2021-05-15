@@ -2,13 +2,18 @@
 public class IronMan {
 
 	private String name = "アイアンマン";
+	int hp = 100;
 
-	
+
 	public String getName() {
 		return this.name;
 	}
 
-	
+	public String toString() {
+		return "名前：" + this.getName() + "/HP：" + this.hp;
+	}
+
+
 	public void setName(String name) {
 		if (name == null) {
 			throw new IllegalArgumentException

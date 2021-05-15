@@ -1,8 +1,24 @@
 
 public class IronMan {
 
-	private String name = "アイアンマン";
-	int hp = 100;
+	private String name;
+	int hp;
+
+//	静的フィールド
+	static int money;
+
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (o instanceof IronMan) {
+			IronMan im = (IronMan)o;
+			if(this.name.equals(im.name)) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 
 	public String getName() {

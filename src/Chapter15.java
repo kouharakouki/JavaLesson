@@ -2,6 +2,8 @@
 public class Chapter15 {
 
 	public static void main(String[] args) {
+		long start = System.currentTimeMillis();
+
 		String s1 = "スッキリJava";
 		String s2 = "Java";
 		String s3 = "java";
@@ -49,6 +51,23 @@ public class Chapter15 {
 			sb.append("Java");
 		}
 		System.out.println(sb.toString());
+
+//		文字列の分割
+		String s6 = "abc,def:ghi";
+		String[] words = s6.split("[,:]");
+		for (String w : words) {
+			System.out.print(w + "->");
+		}
+
+//		文字列の置き換え
+		String s7 = "abc,def:ghi";
+		String w = s7.replaceAll("[beh]", "X");
+		System.out.println(w);
+
+		System.out.printf("製品番号%s-%02d", "SJV", 3);
+
+		long end = System.currentTimeMillis();
+		System.out.println("処理にかかった時間は・・・" + (end-start) + "ミリ秒でした");
 	}
 
 //	文字を判定するメソッド
@@ -68,5 +87,12 @@ public class Chapter15 {
 		}
 		return true;
 	}
+
+//	上記の判定メソッドをmatchesメソッドを使う→パターンマッチング
+	public boolean isValidPlayerName1(String name) {
+		return name.matches("[A-Z][A-z0-9]{7}");
+	}
+
+
 
 }

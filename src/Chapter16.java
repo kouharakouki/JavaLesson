@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -48,6 +50,25 @@ public class Chapter16 {
 		for (String s : words) {
 			System.out.print(s + "→");
 		}
+
+
+//		mapクラスの利用
+		Map<String, Integer> prefs = new HashMap<String, Integer>();
+		prefs.put("京都府", 255);
+		prefs.put("東京都", 1261);
+		prefs.put("熊本県", 181);
+		int tokyo = prefs.get("東京都");
+		System.out.println("東京都の人口は、" + tokyo);
+		prefs.put("熊本県", 182);
+		int kumamoto = prefs.get("熊本県");
+		System.out.println("熊本県の人口は" + kumamoto);
+
+//		中身を1つずつ取り出す方法
+		for (String key : prefs.keySet()) {
+			int value = prefs.get(key);
+			System.out.println(key + "の人口は" + value);
+		}
+
 	}
 
 }

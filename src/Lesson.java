@@ -112,6 +112,51 @@ public class Lesson {
 			System.out.println(i + "回目のループです");
 		}
 
+		int j = 1;
+		while (j < 10) {
+			if (j % 5 == 0) {
+				break;
+			}
+			System.out.println(j);
+			j++;
+		}
+
+		for (int i = 1; i < 10; i++) {
+			if (i % 3 == 0) {
+				continue;
+			}
+			System.out.println(i);
+		}
+
+		String names[] = {"ゼロ", "一郎", "次郎",};
+		System.out.println(names[0]);
+		System.out.println(names[2]);
+		names[0] = "zero";
+		System.out.println(names[0]);
+
+		for (int i = 0; i < names.length; i++) {
+			System.out.println("私の名前は" + names[i] + "です");
+		}
+
+		for (String name1 : names) {
+			System.out.println("私の名前は" + name1 + "です");
+		}
+
+		int numbers1[] = {1, 4, 6, 9, 13, 16};
+
+		int oddSum = 0;
+		int evenSum = 0;
+
+		for (int numberx : numbers1) {
+			if (numberx % 2 == 0) {
+				evenSum += numberx;
+			} else {
+				oddSum += numberx;
+			}
+		}
+		System.out.println("奇数の和は" + oddSum + "です");
+		System.out.println("偶数の和は" + evenSum + "です");
+
 	}
 
 }
